@@ -1907,6 +1907,7 @@ Footer widgets
   margin: 0 auto;
 }
 
+
 /* woocommerce
 ------------------------------*/
 .woocommerce div.product form.cart .variations td.label {
@@ -3768,6 +3769,17 @@ img.mfp-img {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+  }
+  #hero {
+    background-image: url("https://keychf.com/wp-content/uploads/2023/05/KeyCHF-Background-2.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0px 0px;
   }
   .mfp-img-mobile .mfp-bottom-bar:empty {
     padding: 0;

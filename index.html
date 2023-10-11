@@ -21,9 +21,14 @@
 
     <script type="text/javascript" src="./assets/jquery/jquery.min.js" id="jquery-core-js"></script>
     <script type="text/javascript" src="./assets/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+    <link rel="stylesheet" href="./assets/jquery/morphext.css">
+    <script src="./assets/jquery/morphext.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" id="onepress-animate-css"
+        href="https://keychf.com/wp-content/themes/onepress/assets/css/animate.min.css?ver=2.3.5" type="text/css"
+        media="all">
+
     <link rel="icon" href="https://keychf.com/wp-content/uploads/2023/05/cropped-KeyCHF-Favicon-32x32.png"
         sizes="32x32">
     <link rel="icon" href="https://keychf.com/wp-content/uploads/2023/05/cropped-KeyCHF-Favicon-192x192.png"
@@ -52,19 +57,19 @@
                 <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"
                     style="padding-top: 10%; padding-bottom: 10%;">
                     <div class="hero__content hero-content-style1">
-                        <h2 class="hero-large-text">እኛ <span class="js-rotating morphext"><span
-                                    class="animated flipInX">KeyCHF</span></span> ነን!</h2>
+                        <h2 class="hero-large-text">እኛ <span class="morphext"><span class=""
+                                    id="text">KeyCHF</span></span> ነን!</h2>
                         <div class="hero-small-text">
-                            <p>በአነስተኛ <span class="js-rotating morphext"><span
-                                        class="animated flipInX">ክፍያ</span></span> የቤት ባለቤት ይሁኑ!</p>
+                            <p>በአነስተኛ <span class="morphext"><span id="text1" class="">ክፍያ</span></span> የቤት
+                                ባለቤት ይሁኑ!</p>
                         </div> <a href="#" class="btn btn-primary btn-lg">ይመዝገቡ</a>
                         <a href="#" class="btn btn-primary btn-lg">ይግቡ</a>
                     </div>
                 </div>
                 <div class="backstretch"
-                    style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 475.125px; width: 1124px; z-index: -999998; position: absolute;">
+                    style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 100%; width: 100vw; z-index: -999998; position: absolute;">
                     <img src="https://keychf.com/wp-content/uploads/2023/05/KeyCHF-Background-2.png"
-                        style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1124px; height: 746.406px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -135.641px;">
+                        style="position: absolute; margin: 0px; padding: 0px; border: none; width: 100%; height: 746.406px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -135.641px;">
                 </div>
             </section>
 
@@ -194,11 +199,12 @@
 
                                 <div class="d-flex justify-content-between align-items-center pb-5"
                                     data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
-                                    <div class="text-center pr-5 shadow-sm" style="width: 60%;">
+                                    <!-- <div class="text-center pr-5 shadow-sm d-sm-none d-md-none d-lg-block"
+                                        style="width: 60%;">
                                         <img src="https://www.indexsante.ca/chroniques/images/appartement-residence.jpg"
                                             class="rounded" style="width: 100%; height: 25rem;">
-                                    </div>
-                                    <div class="" style="width: 38%;" data-aos="fade-left" data-aos-easing="linear"
+                                    </div> -->
+                                    <div class="" style="width: 100%;" data-aos="fade-left" data-aos-easing="linear"
                                         data-aos-duration="1500">
                                         <p style="text-align: left;" class="about-hero">ኪ ሃውሲንግ ፋይናስ ሶሉሽን ከሰው ልጆች መሠረታዊ
                                             ፍላጎቶች አንዱ የሆነውን መጠለያ/መኖርያ ቤት የመግዣ አቅም ማነስን
@@ -250,7 +256,9 @@
                     <div class="container">
                         <div class="videolightbox__icon videolightbox-popup">
                             <a href="https://www.youtube.com/watch?v=9gA3F2GXros"
-                                data-scr="https://www.youtube.com/watch?v=9gA3F2GXros" class="popup-video">
+                                data-scr="https://www.youtube.com/watch?v=9gA3F2GXros" class="popup-video"
+                                data-effect="mfp-zoom-in" data-type="iframe"
+                                title="KeyCHF - Explanation Video Press Release" target="_blank">
                                 <span class="video_icon"><i class="fa fa-play"></i></span>
                             </a>
                         </div>
@@ -282,8 +290,8 @@
                                         <p> የካበተ ልምድ ባላቸው ባለሙያዎች የተቋቋመ አገር በቀል ኩባንያ ነው፡፡</p>
                                     </div>
 
-                                    <img style="width: 12%; height: 3rem;"
-                                        src="https://keychf.com/wp-content/uploads/2023/05/cropped-KeyCHF-Logo-New.png" />
+                                    <!-- <img style="width: 12%; height: 3rem;"
+                                        src="https://keychf.com/wp-content/uploads/2023/05/cropped-KeyCHF-Logo-New.png" /> -->
 
                                 </div>
 
@@ -409,17 +417,72 @@
 
         </footer>
     </div>
+    <script>
+        call();
+        AOS.init();
+
+        // Get the element to animate
+        function call() {
+            const textElement = document.querySelector("#text");
+            const textElement2 = document.querySelector("#text1");
+
+            // Create an array of words to animate
+            const words = ["KeyCHF", "አስተማማኝ", "ገንዘብ ቆጣቢ", "ህልም አሳኪ"];
+            const words2 = ["ክፍያ", "ቁጠባ", "ክፍያ", "ቁጠባ"];
+
+            // Set the current word index
+            let currentWordIndex = 1;
+
+            // Start the animation loop
+            setInterval(() => {
+                // Get the next word in the array
+                const nextWord = words[currentWordIndex];
+                const nextWord2 = words2[currentWordIndex];
+
+
+                // Update the text element with the next word
+                textElement.textContent = nextWord;
+                textElement2.textContent = nextWord2;
+
+                // Add a CSS class to the text element to trigger the animation
+                textElement.classList.add("animated");
+                textElement.classList.add("flipInX");
+                textElement2.classList.add("animated");
+                textElement2.classList.add("flipInX");
+
+                // Remove the CSS class after the animation is complete
+                setTimeout(() => {
+                    textElement.classList.remove("animated");
+                    textElement.classList.remove("flipInX");
+                    textElement2.classList.remove("animated");
+                    textElement2.classList.remove("flipInX");
+                }, 1000);
+
+                // Increment the current word index
+                currentWordIndex++;
+
+                // If the current word index is greater than the array length, reset it to 0
+                if (currentWordIndex >= words.length) {
+                    currentWordIndex = 0;
+                }
+            }, 2000);
+        }
+
+    </script>
     <script type="text/javascript"
+        src="https://keychf.com/wp-content/themes/onepress/assets/js/theme-all.min.js?ver=2.3.5"
+        id="onepress-theme-js"></script>
+    <!-- <script type="text/javascript"
         src="https://keychf.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.7.7.0"
-        id="jquery-blockui-js"></script>
+        id="jquery-blockui-js"></script> -->
     <script type="text/javascript" id="onepress-theme-js-extra">
         /* <![CDATA[ */
         var onepress_js_settings = { "onepress_disable_animation": "0", "onepress_disable_sticky_header": "", "onepress_vertical_align_menu": "", "hero_animation": "flipInX", "hero_speed": "5000", "hero_fade": "750", "submenu_width": "0", "hero_duration": "5000", "hero_disable_preload": "", "disabled_google_font": "", "is_home": "", "gallery_enable": "1", "is_rtl": "", "parallax_speed": "0.5" };
     /* ]]> */
     </script>
-    <script type="text/javascript"
+    <!-- <script type="text/javascript"
         src="https://keychf.com/wp-content/themes/onepress/assets/js/theme-all.min.js?ver=2.3.5"
-        id="onepress-theme-js"></script>
+        id="onepress-theme-js"></script> -->
     <script type="text/javascript" id="jquery.bully-js-extra">
         /* <![CDATA[ */
         var Onepress_Bully = { "enable_label": "1", "disable_mobile": "", "sections": { "hero": { "id": "hero", "_id": "hero", "inverse": 1, "enable": true, "title": "" }, "clients": { "id": "clients", "_id": "clients", "inverse": false, "enable": false, "title": "Our Clients" }, "features": { "id": "features", "_id": "features", "inverse": false, "enable": true, "title": "\u12e8\u1270\u1208\u12e8 \u1325\u1245\u121d" }, "services": { "id": "services", "_id": "services", "inverse": false, "enable": true, "title": "\u12a0\u1308\u120d\u130d\u120e\u1273\u127d\u1295" }, "videolightbox": { "id": "videolightbox", "_id": "videolightbox", "inverse": 0, "enable": false, "title": "KeyCHF - <strong>Explanation Video Press Release<\/strong>" }, "about": { "id": "about", "_id": "about", "inverse": false, "enable": true, "title": "\u1235\u1208 \u12a5\u129b" }, "counter": { "id": "counter", "_id": "counter", "inverse": false, "enable": false, "title": "\u12c8\u1233\u129d \u1218\u1228\u1303\u12ce\u127d" }, "testimonials": { "id": "testimonials", "_id": "testimonials", "inverse": false, "enable": false, "title": "Testimonials" }, "contact": { "id": "contact", "_id": "contact", "inverse": false, "enable": true, "title": "\u12eb\u130d\u1299\u1295" }, "gallery": { "id": "gallery", "_id": "gallery", "inverse": false, "enable": true, "title": "Gallery" }, "projects": { "id": "projects", "_id": "projects", "inverse": false, "enable": false, "title": "Highlight Projects" }, "pricing": { "id": "pricing", "_id": "pricing", "inverse": false, "enable": false, "title": "Pricing Table" }, "cta": { "id": "cta", "_id": "cta", "inverse": false, "enable": false, "title": "" }, "team": { "id": "team", "_id": "team", "inverse": false, "enable": false, "title": "Our Team" }, "news": { "id": "news", "_id": "news", "inverse": false, "enable": true, "title": "Latest News" }, "map": { "id": "map", "_id": "map", "inverse": false, "enable": false, "title": "Map" } } };
@@ -444,8 +507,6 @@
             <div class="c-bully__title">ያግኙን</div>
         </div>
     </div>
-    <script>
-        AOS.init();
-    </script>
+
 
 </html>

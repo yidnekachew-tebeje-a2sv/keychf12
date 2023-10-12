@@ -9,7 +9,7 @@
     <meta name="robots" content="max-image-preview:large">
     <link rel="stylesheet" href="style.min.css">
     <script defer type="text/javascript" src="./assets/jquery/jquery.min.js" id="jquery-core-js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <meta name="msapplication-TileImage"
         content="https://keychf.com/wp-content/uploads/2023/05/cropped-KeyCHF-Favicon-270x270.png">
 
@@ -382,55 +382,58 @@
         </footer>
     </div>
     <script>
-        call();
-        AOS.init();
+        window.onload = function () {
+            call();
+            AOS.init();
 
-        // Get the element to animate
-        function call() {
-            const textElement = document.querySelector("#text");
-            const textElement2 = document.querySelector("#text1");
+            // Get the element to animate
+            function call() {
+                const textElement = document.querySelector("#text");
+                const textElement2 = document.querySelector("#text1");
 
-            // Create an array of words to animate
-            const words = ["KeyCHF", "አስተማማኝ", "ገንዘብ ቆጣቢ", "ህልም አሳኪ"];
-            const words2 = ["ክፍያ", "ቁጠባ", "ክፍያ", "ቁጠባ"];
+                // Create an array of words to animate
+                const words = ["KeyCHF", "አስተማማኝ", "ገንዘብ ቆጣቢ", "ህልም አሳኪ"];
+                const words2 = ["ክፍያ", "ቁጠባ", "ክፍያ", "ቁጠባ"];
 
-            // Set the current word index
-            let currentWordIndex = 1;
+                // Set the current word index
+                let currentWordIndex = 1;
 
-            // Start the animation loop
-            setInterval(() => {
-                // Get the next word in the array
-                const nextWord = words[currentWordIndex];
-                const nextWord2 = words2[currentWordIndex];
+                // Start the animation loop
+                setInterval(() => {
+                    // Get the next word in the array
+                    const nextWord = words[currentWordIndex];
+                    const nextWord2 = words2[currentWordIndex];
 
 
-                // Update the text element with the next word
-                textElement.textContent = nextWord;
-                textElement2.textContent = nextWord2;
+                    // Update the text element with the next word
+                    textElement.textContent = nextWord;
+                    textElement2.textContent = nextWord2;
 
-                // Add a CSS class to the text element to trigger the animation
-                textElement.classList.add("animated");
-                textElement.classList.add("flipInX");
-                textElement2.classList.add("animated");
-                textElement2.classList.add("flipInX");
+                    // Add a CSS class to the text element to trigger the animation
+                    textElement.classList.add("animated");
+                    textElement.classList.add("flipInX");
+                    textElement2.classList.add("animated");
+                    textElement2.classList.add("flipInX");
 
-                // Remove the CSS class after the animation is complete
-                setTimeout(() => {
-                    textElement.classList.remove("animated");
-                    textElement.classList.remove("flipInX");
-                    textElement2.classList.remove("animated");
-                    textElement2.classList.remove("flipInX");
-                }, 1000);
+                    // Remove the CSS class after the animation is complete
+                    setTimeout(() => {
+                        textElement.classList.remove("animated");
+                        textElement.classList.remove("flipInX");
+                        textElement2.classList.remove("animated");
+                        textElement2.classList.remove("flipInX");
+                    }, 1000);
 
-                // Increment the current word index
-                currentWordIndex++;
+                    // Increment the current word index
+                    currentWordIndex++;
 
-                // If the current word index is greater than the array length, reset it to 0
-                if (currentWordIndex >= words.length) {
-                    currentWordIndex = 0;
-                }
-            }, 2000);
+                    // If the current word index is greater than the array length, reset it to 0
+                    if (currentWordIndex >= words.length) {
+                        currentWordIndex = 0;
+                    }
+                }, 2000);
+            }
         }
+
 
     </script>
     <script defer type="text/javascript" src="./assets/jquery/theme.all.min.js" id="onepress-theme-js"></script>
